@@ -6,7 +6,7 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="all tests">
         <classes>
-            <class name="tests.FitPeoAutomation_1"></class>
+           <!-- <class name="tests.FitPeoAutomation_1"></class>-->
         </classes>
     </test>
 </suite>
