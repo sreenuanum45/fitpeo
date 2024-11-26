@@ -1,0 +1,55 @@
+. Run the Test Suite:
+Run the test suite directly from your IDE, or use Maven from the command line.
+
+From the IDE:
+
+Right-click the TestNG class or testng.xml and select "Run".
+From Maven:
+
+
+
+bash
+Copy code
+mvn test
+2. Running with TestNG Suite:
+If you have multiple tests or want to run a set of tests, ensure your testng.xml is properly set up to execute the test suite:
+xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="1">
+    <listeners>
+        <listener class-name="listeners.MyListeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="all tests">
+        <classes>
+            <class name="tests.FitPeoAutomation_1"></class>
+        </classes>
+    </test>
+</suite>
+
+
+3. Running with JUnit Suite:
+If you have multiple tests or want to run a set of tests, ensure your testng.xml is properly set up to execute the test suite:
+
+xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="1">
+    <listeners>
+        <listener class-name="listeners.MyListeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="all tests">
+        <classes>
+            <class name="tests.FitPeoAutomation_1"></class>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+
+
+
+

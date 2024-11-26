@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="listeners.MyListeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/Myprojects/RoofRocketAI/src/test/java/tests/UsersTest.java">
+        <classes>
+           <!-- <class name="tests.UsersTest"></class>-->
+         <!--   <class name="tests.DashBoardTest"></class>
+            <class name="tests.LoginTest"></class>
+            <class name="tests.Roofer_AI_AssitantTest"></class>
+            <class name="tests.ServeTest"></class>-->
+            <class name="tests.Roofer_AI_AssitantTest"></class>
+        </classes>
+    </test>
+</suite>
