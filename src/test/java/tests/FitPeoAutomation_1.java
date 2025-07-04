@@ -54,7 +54,8 @@ public class FitPeoAutomation_1  extends BaseClass {
 
     @Test(priority = 1)
     public void VerifyTheAdjustOfSlider() {
-  Assert.assertEquals(driver.getTitle(), "Remote Patient Monitoring (RPM) - fitpeo.com", "Home page open successful");
+        homePage.ClickOnTheAcceptButton();
+  Assert.assertEquals(driver.getTitle(), "Contact Us – RPM and CCM Services, Remote Care Monitoring", "Home page open successful");
         homePage.ClickOnRevenueCalculatorTab();
         driver.executeScript("arguments[0].scrollIntoView();", revenueCalculatorPage.getSlider());
         HashMap<String, String> sliderState = rangeSliderUtility.getElementState(revenueCalculatorPage.getSlider());
@@ -96,8 +97,10 @@ public class FitPeoAutomation_1  extends BaseClass {
 
     @Test(priority = 2)
     public void verifyTheSliderValueAsInput() throws InterruptedException {
+        homePage.ClickOnTheAcceptButton();
         homePage.ClickOnRevenueCalculatorTab();
         String inputvalue = "560";
+        System.out.println(inputvalue);
         JavaScriptExceutorUtlity.scrollBy(driver, 0, 100);
         Assert.assertTrue(revenueCalculatorPage.getSlider().isDisplayed());
         try {

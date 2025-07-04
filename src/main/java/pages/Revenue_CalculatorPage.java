@@ -21,7 +21,7 @@ public class Revenue_CalculatorPage {
     private WebElement sliderValueInput;
     @FindBy(xpath = "//p[text()='Total Individual Patient/Month']//following::p[1]")
     private WebElement sliderValueInThePage;
-    @FindBy(xpath = "(//input[@type='checkbox'])")
+    @FindBy(xpath = "//input[@type='checkbox']")
     private List<WebElement> checkbox;
     @FindBy(xpath = "//p[contains(text(), 'CPT-') and not(contains(text(), 'Required CPT-'))]")
     private List<WebElement> cptCodes;

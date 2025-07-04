@@ -12,6 +12,8 @@ public class HomePage {
     public WaitUtilities waitUtilities;
     @FindBy(xpath = "//div[text()='Home']//parent::a")
     private WebElement homeTab;
+    @FindBy(xpath="//button[text()='Accept']")
+    private WebElement acceptButton;
     @FindBy(xpath = "//div[text()='Revenue Calculator']//parent::a")
     private WebElement revenueCalculatorTab;
     public HomePage(RemoteWebDriver driver) {
@@ -21,5 +23,10 @@ public class HomePage {
     }
     public void ClickOnRevenueCalculatorTab(){
         waitUtilities.fluentWait(revenueCalculatorTab, Constants.timeout, Constants.pollingTime).click();
+    }
+    public void ClickOnTheAcceptButton(){
+        //use javascript executor
+        driver.executeScript("arguments[0].scrollIntoView();",acceptButton);
+       driver.executeScript("arguments[0].click();",acceptButton);
     }
 }
